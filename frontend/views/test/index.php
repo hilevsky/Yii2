@@ -1,6 +1,8 @@
-<?php
-/**
- * Created 04.04.2018 22:30 by E. Hilevsky
- */
+<?php foreach($list as $item): ?>
 
-echo 'Hello world!';
+<h1><?= $item['title']?></h1>
+<p><?= $item['content']?></p>
+
+<hr>
+
+<?php endforeach;
