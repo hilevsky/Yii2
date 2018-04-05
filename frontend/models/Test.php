@@ -10,9 +10,10 @@ use Yii;
 
 class Test
 {
-    public static function getNewsList()
+    public static function getNewsList($max)
     {
-        $sql = 'SELECT * FROM news';
+        $max = intval($max);
+        $sql = 'SELECT * FROM news LIMIT '.$max;
         return Yii::$app->db->createCommand($sql)->queryAll();
 
     }
