@@ -41,6 +41,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'novosti' => 'test/index',
+                'novosti/<id:\d+>' => 'test/view',
             ],
         ],
 
