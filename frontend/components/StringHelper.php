@@ -22,7 +22,9 @@ class StringHelper
         if($limit === null){
             $limit = $this->limit;
         }
-        return mb_substr($string, 0, $limit);
+        $shortstr = mb_strpos($string, ' ', $limit);
+
+        return mb_substr($string, 0, $shortstr);
 
     }
 
