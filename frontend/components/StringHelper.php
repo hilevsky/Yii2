@@ -22,8 +22,27 @@ class StringHelper
         if($limit === null){
             $limit = $this->limit;
         }
-        return mb_substr($string, 0, $limit);
+        $shortstr = mb_strpos($string, ' ', $limit);
 
+        return mb_substr($string, 0, $shortstr);
     }
+
+    public function getShortWords($string, $limit = null)
+    {
+        if($limit === null){
+            $limit = $this->limit;
+        }
+
+        $i = 1;
+        $shortstr = 0;
+        while ($i<=$limit) {
+            $shortstr = mb_strpos($string, ' ', $shortstr);
+            $shortstr++;
+            $i++;
+        }
+
+        return mb_substr($string, 0, $shortstr);
+    }
+
 
 }
