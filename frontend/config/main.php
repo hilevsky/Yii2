@@ -49,6 +49,19 @@ return [
         'stringHelper' => [
             'class' => 'frontend\components\StringHelper'
         ],
+
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,
+            'transport' =>[
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yahoo.com',
+                'username' => 'e_gilevski@yahoo.com',
+                'password' => '8630149',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],
+        ],
         
     ],
     'params' => $params,
