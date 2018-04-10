@@ -30,6 +30,11 @@ return [
                 ],
             ],
         ],
+
+        'stringHelper' => [
+            'class' => 'common\components\StringHelper'
+        ],
+
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'useFileTransport' => false,
