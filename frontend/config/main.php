@@ -41,7 +41,13 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'news' => 'test/index',
+                'news/<id:\d+>' => 'test/view',
             ],
+        ],
+
+        'stringHelper' => [
+            'class' => 'frontend\components\StringHelper'
         ],
         
     ],
